@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario_de_pececs">
+    <meta name="author" content="Alvaro/Marcos">
+    <meta name="Keywords" content="Horario/DAW1/Curso 1">
+    <meta name="generator" content="Formulario_de_pececs">
+    <meta name="refresh" content="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,follow">
+    <title>Álvaro/Marcos</title>
+    <link rel="icon" type="image/x-icon" href="/webroot/media/img/favicon/1-349ed813.ico">
+</head>
+<body>
+    <div id="sticky"><img src="/webroot/media/img/pibes.jpeg" alt="Creadores de la pagina" width="100"
+        height="100"></div>
+    <header>
+        <h1>Plantilla de formulario de peces</h1>
+    </header>
+    <main>
+        <form action="/action_page.php">
+        <fieldset>
+            <legend><h2>Donde se hace la magia</h2></legend>
+
+          
+            <label for="url">Entrar en URL:</label>
+            <input type="url" name="url" id="url" placeholder="https://ejemplo.com" pattern="https://.*" size="30"> <br>
+            
+            <label for="buscador">Buscador</label><br>
+            <input type="search" name="buscador" id="buscador"><br>
+            <button>Search</button><br>
+        </fieldset>
+        <fieldset>
+            <label>Introduzca su usuario y contraseña</label><br>
+            <input type="text" name="nombre" id="name" minlength="1" maxlength="18" required><br>
+
+            <input type="password" minlength="5" pattern=".{5,}" title="min 5 caracteres"><br>
+
+            <label>Introduce tu email</label><br>
+            <input type="email" maxlength="50" minlength="5" title="introduzca un correo valido" required><br>
+        </fieldset>
+        <fieldset>
+            <label>Elige tu favorito 😎</label><br>
+            <label for="pez_fumon"><input type="radio" name="pezfavorito" id="pez_fumon" checked>pez fumon </label> <br>
+            <label for="pez_mamon"><input type="radio" name="pezfavorito" id="pez_mamon">pez mamon </label> <br>
+            <label for="pez_con_amigo"><input type="radio" name="pezfavorito" id="pez_con_amigo">pez con amigo </label> <br>
+        </fieldset>
+        <fieldset>  
+            <p>Como de duro va este tio</p>
+            <input type="image" src="/webroot/media/img/pezpollo.webp" alt="foto de pez cosplay de pollo" width="200"><br>
+            <input type="range" name="flowdelpez" id="flowdelpez" value="10"><br>
+            Comenta como te hace sentir esta foto<br>
+            <textarea id="flowdepec" name="flowdepec"></textarea><br>
+        </fieldset>
+        <fieldset>  
+                <label>Desea donar a alguno de nuestros peces</label><br>
+                <label for="pez_fumon1"><input type="checkbox" name="pezsalame" id="pez_fumon1" checked>pez fumon </label> <br>
+                <label for="pez_mamon1"><input type="checkbox" name="pezsalame" id="pez_mamon1">pez mamon </label> <br>
+                <label for="pez_con_amigo1"><input type="checkbox" name="pezsalame" id="pez_con_amigo1">pez con amigo </label> <br>
+                <input type="submit" value="Donar"><br>
+        </fieldset>
+        <fieldset>  
+                <label for="opciones">Que pez nada mas rapido?</label><br>
+                    <select name="opciones" id="opciones">
+                    <option value="pez fumon">pez fumon</option>
+                    <option value="pez mamon">pez mamon</option>
+                    <option value="pez con amigo">pez con amigo</option>
+                </select><br>
+        </fieldset>  
+        <fieldset>
+            <label>Introduce tu telefono de 9 digitos</label><br><input type="tel" title="Introduce un telefono" pattern="[0-9]{9}"><br>
+            <label>Hora para visitar el pez mamon (de 9 de la mañana a tres de la tarde no incluido)</label><br><input type="time" min="09:00" max="15:00"><br>
+
+            <input type="date" min="2024-10-16" max="2025-10-16" value="2024-12-24"><br>
+        </fieldset>
+        <fieldset>
+            <label>De que color es tu pez</label><br>
+            <input type="color" name="colorh" id="colorh"><br>
+         
+            <input type="hidden">
+        </fieldset> 
+        <fieldset>
+            <select name="transporte" size="3" multiple>
+
+                <option>Coche del pez mamon</option>
+                
+                <option>Avión del pez fumon</option>
+                
+                <option>Tren del pez con amigos</option>
+              
+            </select> <br>  
+        </fieldset>
+        <fieldset>
+            <aside>
+                <label>Envianos la fecha de nacimiento de tu pez</label><br>
+            <input type="week"><br>
+                <label>Envianos la fecha de la cremacion de tu pez</label><br>
+            <input type="month"><br>
+            </aside>
+        
+        </fieldset>
+        <fieldset>
+            <label for="avatar">Mandanos una foto de tu pez</label><br>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" ><br>
+        </fieldset>
+        <fieldset>
+            <aside>
+            <section>
+                <header><h2> Se viene el cine</h2></header>
+            <label for="drip">Puntua este drip del 1 al 10</label><br>
+            <img src="/webroot/media/img/pezdrip.webp" alt="pezDRIP" width="200" height="200"><br>
+            <input type="number" id="drip" name="drip" min="1" max="10" ><br>
+            </section>
+            <input type="submit" value="Enviar"><br>
+            <input type="reset" value="Reiniciar"><br>
+            </aside>
+        </fieldset>
+    </form>
+    </main>
+    <footer>
+        <a href="https://validator.w3.org/check?uri=https://daw104.ieslossauces.es/104LMSGIProyectoLMSGI/ud2/03/index.html">
+            <img src="/webroot/media/img/W3C®_Icon.svg.png" alt="Validado por W3C" width="88" height="31">                   
+          </a>
+        2024-10 IES LOS SAUCES. &#169;Todos los derechos reservados. Álvaro García González y Marcos Fernández García<time datetime="2024-10-16"> 4/12/2024</time>
+     </footer>
+</body>
+    
+    <!--autor:Alvaro García González y Marcos Fernández García-->
+     <!--fecha modificacion:16/10/2024-->
+     <!--descripcion formulario peces-->
+</html>
