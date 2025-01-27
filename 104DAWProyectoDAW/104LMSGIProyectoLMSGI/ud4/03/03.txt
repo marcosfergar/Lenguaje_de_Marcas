@@ -1,0 +1,47 @@
+Lenguajes de Programación:
+
+1. Python
+   Descripción: Python es un lenguaje de programación interpretado, de alto nivel y de propósito general.
+   Ejemplo:
+   def saludo():
+       print("¡Hola, Mundo!")
+   
+   saludo()
+
+2. JavaScript
+   Descripción: JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico en la web.
+   Ejemplo:
+   function saludo() {
+       alert("¡Hola, Mundo!");
+   }
+
+   saludo();
+
+3. Java
+   Descripción: Java es un lenguaje de programación de propósito general que es ampliamente utilizado en aplicaciones empresariales y móviles.
+   Ejemplo:
+   public class Saludo {
+       public static void main(String[] args) {
+           System.out.println("¡Hola, Mundo!");
+       }
+   }
+
+4. C++
+   Descripción: C++ es un lenguaje de programación de propósito general, conocido por su eficiencia y uso en aplicaciones de alto rendimiento.
+   Ejemplo:
+   #include <iostream>
+   using namespace std;
+
+   int main() {
+       cout << "¡Hola, Mundo!" << endl;
+       return 0;
+   }
+
+5. Ruby
+   Descripción: Ruby es un lenguaje de programación dinámico y de alto nivel, conocido por su sintaxis simple y elegante.
+   Ejemplo:
+   def saludo
+     puts "¡Hola, Mundo!"
+   end
+
+   saludo

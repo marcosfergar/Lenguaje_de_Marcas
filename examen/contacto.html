@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Marcos Fernández García">
+    <meta name="description" content="INDICE">
+    <meta name="keywords" content="article">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./webroot/media/images/favicon.png">
+    <link rel="stylesheet" href="./webroot/css/estilos.css" type="text/css">
+    <title>Los Juegos del hambre-Contacto</title>
+    <style>
+        #cnt{
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>LOS JUEGOS DEL HAMBRE</h1>
+        Suanze Collins
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./inicio.html">INICIO</a></li>
+            <li><a href="./personajes.html">PERSONAJES</a></li>
+            <li><a href="./lasaga.html">LASAGA</a></li>
+            <li><a href="./extras.html">EXTRAS</a></li>
+            <li><a id="cnt" href="./contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <form action="/action_page.php">
+        <fieldset>
+            <h2>Iniciar Sesion</h2>
+            <label>USUARIO</label><br>
+            <input id="usr" type="text" name="nombre" id="name" minlength="1" maxlength="18" required ><br>
+            <label>CONTRASEÑA</label><br>
+            <input id="cnts" type="password" minlength="5" pattern=".{5,}" title="min 5 caracteres"><br>
+            <input id="login" type="submit" value="Login"><br>
+        </fieldset>
+        
+    </form>
+    
+    <footer>
+        &#169;<time datetime="2024-11-06T20:35:00"> 2024</time> Los juegos del Hambre Fan Page
+        | Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

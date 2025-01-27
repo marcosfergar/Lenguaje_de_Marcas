@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilos.css"?>
+<programinglenguages xmlns:xsi=""/>
+<!-- Marcos Fernández García-->
+<!-- Informacion de una biblioteca-->
+<!DOCTYPE programmingLanguages SYSTEM "03.dtd">
+<programmingLanguages>
+    <lenguaje name="python">
+        <description>
+        Python es un lenguaje de programación interpretado, de alto nivel y de propósito general.
+        </description>
+        <example>
+            <![CDATA[
+        def saludo():
+        print("¡Hola, Mundo!")
+    saludo()]]>
+        </example>
+    </lenguaje>
+    <lenguaje name="javaScript">
+        <description>
+    JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico en la web.
+        </description>
+        <example>
+            <![CDATA[
+    function saludo() {
+       alert("¡Hola, Mundo!");
+   }]]>
+        </example>
+    </lenguaje>
+    <lenguaje name="java">
+        <description>
+    Java es un lenguaje de programación de propósito general que es ampliamente utilizado en aplicaciones empresariales y móviles.
+        </description>
+
+        <example>
+            <![CDATA[
+    public class Saludo {
+       public static void main(String[] args) {
+           System.out.println("¡Hola, Mundo!");
+       }
+   }]]>
+        </example>
+    </lenguaje>
+    <lenguaje name="C++">
+    <description>
+    C++ es un lenguaje de programación de propósito general, conocido por su eficiencia y uso en aplicaciones de alto rendimiento.
+    </description>
+    <example>
+        <![CDATA[
+    #include iostream
+   using namespace std;
+   int main() {
+       cout << "¡Hola, Mundo!" << endl;
+       return 0;
+   }]]>
+    </example>
+    </lenguaje>
+    <lenguaje name="ruby">
+        <description>
+    Ruby es un lenguaje de programación dinámico y de alto nivel, conocido por su sintaxis simple y elegante.
+        </description>
+        <example>
+            <![CDATA[
+    def saludo
+     puts "¡Hola, Mundo!"
+   end
+   saludo    
+   ]]>
+        </example>
+    </lenguaje>
+</programmingLanguages>

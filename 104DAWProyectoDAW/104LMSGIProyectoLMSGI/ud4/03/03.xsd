@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="">    
+    <xs:complexType name="tipoLenguaje">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        </xs:complexType>
+        <xs:element name="programinglenguaje">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        </xs:schema>

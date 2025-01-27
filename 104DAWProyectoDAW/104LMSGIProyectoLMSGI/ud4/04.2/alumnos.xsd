@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+       xmlns="http://www.example.com/alumnos" targetNamespace="http://www.example.com/alumnos" elementFormDefault="qualified">
+
+       <!-- Definir el elemento "alumnos", que contiene una lista de alumnos -->
+       <xs:element name="alumnos">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="alumno" type="tipoAlumnos"></xs:element>
+                     </xs:sequence>
+              </xs:complexType>
+       </xs:element>
+       <!--Declaracion de elemento complejo -->
+       <xs:complexType name="tipoAlumnos">
+              <xs:sequence>
+                     <xs:element name="apellido1" type="xs:string"></xs:element>
+                     <xs:element name="apellido2" type="xs:string"></xs:element>
+                     <xs:element name="nombre" type="xs:string"></xs:element>
+                     <xs:element name="sexo" type="tipoSexo"></xs:element>
+                     <xs:element name="estudios" type="tipoEstudios"></xs:element>
+              </xs:sequence>
+              <xs:attribute name="id" type="xs:ID" use="required"></xs:attribute>
+              <xs:attribute name="beca" default="no" use="optional">
+                     <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                   <!-- 
+                            <xs:enumeration value="si"></xs:enumeration>
+                            <xs:enumeration value="no"></xs:enumeration>
+                     -->
+                                   <xs:pattern value="si|no"></xs:pattern>
+                            </xs:restriction>
+                     </xs:simpleType>
+              </xs:attribute>
+       </xs:complexType>
+       <xs:simpleType name="tipoSexo">
+              <xs:restriction base="xs:string">
+                     <xs:pattern value="hombre|mujer"></xs:pattern>
+              </xs:restriction>
+       </xs:simpleType>
+       <xs:complexType name="tipoEstudios">
+              <xs:sequence>
+                     <xs:element name="carrera">
+                            <xs:complexType>
+                                   <xs:attribute name="codigo" type="xs:ID" use="required"></xs:attribute>
+                            </xs:complexType>
+                     </xs:element>
+                     <xs:element name="asignatura">
+                            <xs:complexType>
+                                   <xs:sequence>
+                                          <xs:element name="asignatura" maxOccurs="unbounded">
+                                                 <xs:complexType>
+                                                        <xs:attribute name="codigo" type="xs:IDREF" use="required"></xs:attribute>
+                                                 </xs:complexType>
+                                          </xs:element>
+                                   </xs:sequence>
+                            </xs:complexType>
+                     </xs:element>
+              </xs:sequence>
+       </xs:complexType>
+</xs:schema>

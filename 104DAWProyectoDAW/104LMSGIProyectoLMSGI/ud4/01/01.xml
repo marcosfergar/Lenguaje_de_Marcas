@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Marcos Fernández García-->
+<!-- Informacion de un mail-->
+<!DOCTYPE mail[
+<!ELEMENT dia(#PCDATA)>
+<!ELEMENT mes(#PCDATA)>
+<!ELEMENT anio(#PCDATA)>
+<!ELEMENT destinatario(#PCDATA)>
+<!ELEMENT nombre(#PCDATA)>
+<!ELEMENT remitente(#PCDATA)>
+<!ELEMENT tipo_mime(#PCDATA)>
+<!ELEMENT mensaje(h1|h2|h3|p)>
+<!ELEMENT fecha(anio|mes|dia)>
+<!ELEMENT fichero(nombre|tipo_mime)>
+<!ELEMENT ficheros_adjuntos(ficheros+)>
+<!ELEMENT asunto(#PCDATA)>
+<!ELEMENT mail(remitente,destinatario,fecha,asunto,mensaje,ficheros_adjuntos)>
+]>
+<mail>
+    <remitente>
+        peper@gmail.com
+    </remitente>
+
+    <destinatario>
+        maria@gmail.com
+    </destinatario>
+    <destinatario>
+        sofia@gmail.com
+    </destinatario>
+
+    <fecha>
+        <anyo>2024</anyo>
+        <mes>11</mes>
+        <dia>25</dia>
+    </fecha>
+
+    <asunto>
+        cena de navidad 2024
+    </asunto>
+
+    <mensaje>
+        <h1> invitacion Navidada 2024 </h1>
+        Querido/a compañero/a:
+        Nos complace invitarte a compartit una noche especial en nuestra Cena navidad, que se celebrará en el encantador Parador de Benavente
+
+        <h2>Detalles del evento</h2>
+        Fecha: jueves, 21 de diciembre de 2023
+        Hora:21:00
+        Lugar:Parador de Benavente
+
+        ven a disfrutar de una velada inolvidable llena de buena compañia, deliciosa gastronomia y le espiritu navideño que tanto nos une. Habre,ps preparado un menu especial pensado para celebrar esta magica ocasion
+
+        Por favor, confirma tu asistencia antes del 15 de diciembre de 2023 respondiendo a este correo o contactando al [telefono/email de contacto].
+
+        Esperamos contar contigo para hacer de esta cena un momento aun mas especial. ¡No faltes!
+        
+        Con cariño.
+        
+        Director
+    </mensaje>
+
+    <ficheros_adjuntos>
+    <fichero>
+        <nombre>
+            invitacion.png
+        </nombre>
+        <tipo_mime>
+            image/gif
+        </tipo_mime>
+    </fichero>
+    <fichero>
+        <nombre>
+            invitacion.png
+        </nombre>
+        <tipo_mime>
+            image/gif
+        </tipo_mime>
+    </fichero>
+    </ficheros_adjuntos>
+</mail>
