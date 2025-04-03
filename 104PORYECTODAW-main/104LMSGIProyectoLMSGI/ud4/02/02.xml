@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nombre:Marcos Fernandez-->
+<!--Descripcion:Primer XML-->
+<!DOCTYPE biblioteca SYSTEM "02.dtd">
+<biblioteca>
+    <libro id="Libro1" genero="novela">
+        <titulo>Punto para los locos</titulo>
+        <autores>
+            <autor>
+                <nombre>Angel</nombre>
+                <apellido>Martín</apellido>
+                <nacionalidad>Español</nacionalidad>
+            </autor>
+        </autores>
+        <anio>2024</anio>
+    </libro>
+    <libro id="Libro2" genero="novela" referencia="Libro1">
+        <titulo>La Luna</titulo>
+        <autores>
+            <autor>
+                <nombre>Angel</nombre>
+                <apellido>Martín</apellido>
+                <nacionalidad>Español</nacionalidad>
+            </autor>
+        </autores>
+        <anio>2020</anio>
+    </libro>
+</biblioteca>

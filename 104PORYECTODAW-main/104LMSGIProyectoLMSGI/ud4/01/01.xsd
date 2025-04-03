@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Declaracion de elementos simples -->
+<xs:simpleType name="tipoRemitente">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+<xs:simpleType name="tipoasunto">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+<xs:simpleType name="tipoStrong">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+<xs:simpleType name="tipoDia">
+    <xs:restriction base="xs:positiveInteger">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="31"/>
+    </xs:restriction>       
+</xs:simpleType>
+<xs:simpleType name="tipoMes">
+    <xs:restriction base="xs:positiveInteger">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="12"/>
+    </xs:restriction>       
+</xs:simpleType>
+<!-- Declaracion de elementos complejos -->
+<xs:complexType name="tipodestinatarios">
+    <xs:sequence>
+        <xs:element name="destinatario" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipofechamensaje">
+    <xs:sequence>
+        <xs:element name="dia" type="tipoDia"/>
+        <xs:element name="mes" type="tipoMes"/>
+        <xs:element name="anio" type="xs:gYear"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipomensaje">
+    <xs:choice maxOccurs="unbounded">
+        <xs:element name="p" type="tipoP"/>
+        <xs:element name="strong" type="tipoStrong"/>
+        <xs:element name="h2" type="tipoH2"/>
+        <xs:element name="h3" type="tipoH3"/>
+        <xs:element name="ul" type="tipoUl"/>
+        <xs:element name="li" type="tipoLi"/>
+    </xs:choice>
+</xs:complexType>
+<xs:complexType name="tipoP" mixed="true">
+    <xs:sequence>
+        <xs:element name="strong" type="tipoStrong" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoH2" mixed="true">
+    <xs:sequence>
+        <xs:element name="strong" type="tipoStrong" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoH3" mixed="true">
+    <xs:sequence>
+        <xs:element name="strong" type="tipoStrong" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoUl" mixed="true">
+    <xs:sequence>
+        <xs:element name="strong" type="tipoStrong" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="li" type="tipoLi" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoLi" mixed="true">
+    <xs:sequence>
+        <xs:element name="strong" type="tipoStrong" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoficheros_adjuntos">
+    <xs:sequence>
+        <xs:element name="fichero" type="tipoFichero" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoFichero">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="tipo" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+<!-- Declaracion de grupos de atributos-->
+<!-- Declaracion del esquema -->
+    <xs:element name="mail">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="remitente" type="tipoRemitente" />
+                <xs:element name="destinatarios" type="tipodestinatarios" />
+                <xs:element name="fechamensaje" type="tipofechamensaje" />
+                <xs:element name="asunto" type="tipoasunto" minOccurs="0"/>
+                <xs:element name="mensaje" type="tipomensaje" />
+                <xs:element name="ficheros_adjuntos" type="tipoficheros_adjuntos" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

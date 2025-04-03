@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+  <estudiante>
+    <nombre>Juan Pérez</nombre>
+    <edad>20</edad>
+    <carrera>Ingeniería Informática</carrera>
+  </estudiante>
+  <estudiante>
+    <nombre>María López</nombre>
+    <edad>22</edad>
+    <carrera>Arquitectura</carrera>
+  </estudiante>
+</universidad>

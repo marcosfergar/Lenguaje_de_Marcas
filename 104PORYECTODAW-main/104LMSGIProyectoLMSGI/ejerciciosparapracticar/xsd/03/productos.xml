@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda>
+  <producto>
+    <nombre>Teléfono móvil</nombre>
+    <precio>299.99</precio>
+    <cantidad>10</cantidad>
+  </producto>
+  <producto>
+    <nombre>Ordenador portátil</nombre>
+    <precio>899.99</precio>
+    <cantidad>5</cantidad>
+  </producto>
+</tienda>

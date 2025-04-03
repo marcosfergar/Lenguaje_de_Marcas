@@ -1,0 +1,14 @@
+<!ELEMENT inventario (objeto+)>
+<!ELEMENT objeto (mesa | ordenador)> 
+<!ELEMENT mesa (tipo?, localizacion)> <!-- la interrogacion nos indica que es opcional -->
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT localizacion (#PCDATA)>
+<!ELEMENT ordenador (procesador?, memoria?, discoduro)>
+<!ELEMENT procesador (#PCDATA)>
+<!ELEMENT memoria (#PCDATA)>
+<!ELEMENT discoduro (#PCDATA)>
+<!ATTLIST discoduro tamano (Tb | Gb | Mb) "Gb">
+<!ATTLIST objeto codigo CDATA #IMPLIED> <!-- con los patrones no se puede hacer nada -->
+<!ATTLIST procesador fabricante (Intel | AMD) "Intel"> <!--No se pone el implied porque como tiene un
+valor por defecto pilla ese valor si no se especifica nada -->
+<!ATTLIST memoria unidad CDATA #FIXED "Gb" > <!-- fixed porque es fijo -->

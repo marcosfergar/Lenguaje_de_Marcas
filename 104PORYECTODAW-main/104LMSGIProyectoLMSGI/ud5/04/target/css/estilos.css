@@ -1,0 +1,50 @@
+:root{
+    --color1:white;
+    --color2:rgb(189, 188, 188);
+    --color3:rgb(0,0,0);
+
+    --ancho: 300px;
+    --padIzq: 20px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-right: 50px;
+}
+form{
+    background-color: var(--color2);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-top: var(--color3) solid 1px;
+    border-left: var(--color3) solid 1px;
+    border-right: var(--color3) solid 1px;
+}
+form>div[class="pregunta"]{
+    background-color: var(--color1);
+    border: var(--color3) solid 1px;
+}
+form>div[class="pregunta"]>div:first-child{
+    font-weight: bold;
+}
+form div[class="respuesta"]{
+    border: var(--color2) dashed 1px;
+    margin: 2px;
+}
+form>div:last-child{
+    background-color: var(--color1);
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-left: -11px;
+    margin-right: -11px;
+    text-align: center;
+    border-top: var(--color3) solid 1px;
+}
+form>div:last-child>input{
+    padding-left: 8px;
+    padding-right: 8px;
+}

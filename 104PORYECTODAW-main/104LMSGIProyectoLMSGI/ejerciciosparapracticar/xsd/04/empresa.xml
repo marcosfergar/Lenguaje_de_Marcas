@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa nombreEmpresa="TechCorp">
+  <empleado id="1">
+    <nombre>John</nombre>
+    <apellido>Doe</apellido>
+    <fechaNacimiento>1990-05-15</fechaNacimiento>
+    <salario>50000.00</salario>
+    <activo>true</activo>
+    <horaEntrada>09:00:00</horaEntrada>
+  </empleado>
+  <empleado id="2">
+    <nombre>Jane</nombre>
+    <apellido>Smith</apellido>
+    <fechaNacimiento>1985-08-20</fechaNacimiento>
+    <salario>60000.50</salario>
+    <activo>false</activo>
+    <horaEntrada>08:30:00</horaEntrada>
+  </empleado>
+</empresa>

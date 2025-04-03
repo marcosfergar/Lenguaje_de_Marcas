@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedido">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tractor" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="componente" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fechaEntrega" minOccurs="0">                                        
+                                        <xs:complexType>                                        
+                                            
+                                                <xs:attribute name="dia" type="xs:integer" use="optional"/>
+                                                <xs:attribute name="mes" type="xs:integer" />
+                                                <xs:attribute name="anio" type="xs:gYear" />
+                                       
+                                        </xs:complexType>                                            
+                                            <!--Elemento
+                                            fechaEntrega con restricciones de tipo y formato  -->
+                                        </xs:element>
+                                        <xs:element name="fragil" type="xs:string"/>
+                                        
+                                        <xs:element name="peso">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:positiveInteger">
+                                                        <xs:attribute name="unidad">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="kg"></xs:enumeration>
+                                                                <xs:enumeration value="g"></xs:enumeration>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>                                                        
+                                        </xs:element>
+                                        <xs:element name="numeroSerie" type="xs:string" />
+
+                                        <xs:element name="kmMaximos" type="xs:positiveInteger" minOccurs="0"/>
+                                        
+                                        <xs:element name="cantidad" type="xs:positiveInteger" default="1"/>
+                                    </xs:sequence> <!--
+                                    end of componente sequence -->
+                                    <xs:attribute name="referencia">
+                                        <xs:simpleType>
+                                            <xs:restriction>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence> <!--
+                        end of tractor sequence -->
+                        <xs:attribute name="codigoFabricante" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence> <!--
+            end of pedido sequence-->
+            <xs:attribute name="idPedido" type="xs:string" use="required" />
+            <xs:attribute name="fecha" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

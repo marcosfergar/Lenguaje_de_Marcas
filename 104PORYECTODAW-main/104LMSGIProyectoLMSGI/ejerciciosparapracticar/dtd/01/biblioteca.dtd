@@ -1,0 +1,18 @@
+<!ELEMENT biblioteca (libro+,revista+)> <!-- el + es minimo una vez y se repite-->
+<!ELEMENT libro (titulo,autor,editorial,anio,precio,descripcion,imagen)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+
+<!ATTLIST libro id ID #REQUIRED>
+<!ATTLIST libro formato (impreso|digital) "impreso">
+<!ATTLIST libro idioma ID #REQUIRED>
+
+<!ELEMENT revista (titulo,editorial,anio,precio,articulo+)>
+
+<!ELEMENT articulo (titulo, autor, contenido)>
+<!ELEMENT contenido (#PCDATA)>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="empresa" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empleado">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellido" type="xs:string"/>
+                            <xs:element name="fechaNacimiento" type="xs:string"/>
+                            <xs:element name="salario">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:decimal">
+                                            <xs:fractionDigits value="2"></xs:fractionDigits>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="activo" type="xs:boolean" default="true"/>
+                            <xs:element name="horaEntrada" type="xs:time"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+                <xs:attribute name="nombreEmpresa" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

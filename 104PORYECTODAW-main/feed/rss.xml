@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Marcos_Fernández_García</title>
+        <link>https://www.w3schools.com</link>
+        <description>Servidor web Marcos_Fernández_García DAW1</description>
+        <item>
+            <title>Advertencia_Enconstruccion</title>
+            <link>http://daw104.ieslossauces.es</link>
+            <description>Se una imagen que esta presente en los apartados con fallos o en proceso de desarrollo</description>
+            <img src="/webroot/media/img/obras/Encontruccion.png" alt="en construccion"/>
+        </item>
+        <item>
+            <title>Creditos</title>
+            <link>http://daw104.ieslossauces.es</link>
+            <description>Se añadio un video para comemorar a todos los que aportaron su granito a nuestra pagina</description>
+        </item>
+        <item>
+            <title>Nuevo_Contenido</title>
+            <link>https://daw104.ieslossauces.es/104LMSGIProyectoLMSGI/index.html</link>
+            <description>Se añadieron las tareasa desde la unidad 2 hasta la unidad 5 y los examenes sinsajo y simulacro</description>
+        </item>
+        <item>
+            <title>Nueva_imagen</title>
+            <link>http://daw104.ieslossauces.es</link>
+            <description>La pagina recibio un lavado de cara en todos los apartados</description>
+        </item>
+        <item>
+            <title>Validacion</title>
+            <link>http://daw104.ieslossauces.es</link>
+            <description>Se añadio la validacion a todos los apartados de la pagina-04/12/2024</description>
+        </item>
+        <item>
+            <title>Introduccion mapa interactivo</title>
+            <link>http://daw104.ieslossauces.es/webroot/ud1/mapa.html</link>
+            <description>Se ha añadido un mapa interactivo de papi dafoo-03/12/2024</description>
+        </item>
+        <item>
+            <title>Horario</title>
+            <link>http://daw104.ieslossauces.es/webroot/ud2/02/index.html</link>
+            <description>Horario del curso DAW1 del IES Los Sauces-03/12/2024</description>
+        </item>
+        
+    </channel>
+</rss>
+
+ 

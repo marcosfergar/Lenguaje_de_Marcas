@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario OSI</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h2>Cuestionario OSI</h2>
+    
+    <form>
+        <fieldset>
+            <legend>1.- ¿Qué capa OSI administra los segmentos de datos?</legend>
+            <input type="radio" name="pregunta1" value="aplicacion"> Capa de aplicación<br>
+            <input type="radio" name="pregunta1" value="presentacion"> Capa de presentación<br>
+            <input type="radio" name="pregunta1" value="sesion"> Capa de sesión<br>
+            <input type="radio" name="pregunta1" value="transporte"> Capa de transporte<br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>2.- ¿Qué tipo de información contiene el encabezado de la Capa 4 para ayudar en el envío de datos?</legend>
+            <input type="radio" name="pregunta2" value="puerto"> Número de puerto del servicio<br>
+            <input type="radio" name="pregunta2" value="logica"> Dirección lógica del host<br>
+            <input type="radio" name="pregunta2" value="fisica"> Dirección física del dispositivo<br>
+            <input type="radio" name="pregunta2" value="identificador"> Identificador de conexión virtual<br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>3.- Durante el proceso de encapsulación, ¿qué identificadores se agregan en la capa de transporte?</legend>
+            <input type="radio" name="pregunta3" value="ip"> Direcciones IP de origen y de destino<br>
+            <input type="radio" name="pregunta3" value="mac"> Direcciones MAC de origen y de destino<br>
+            <input type="radio" name="pregunta3" value="puertos"> Números de puertos de origen y destino<br>
+            <input type="radio" name="pregunta3" value="canal"> Identificadores de canal de origen y destino<br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>4.- ¿Qué rango de números de puerto se asigna de forma dinámica a las aplicaciones cliente al iniciar una conexión con el servidor?</legend>
+            <input type="radio" name="pregunta4" value="0-255"> De 0 a 255<br>
+            <input type="radio" name="pregunta4" value="0-1023"> De 0 a 1023<br>
+            <input type="radio" name="pregunta4" value="1024-49151"> De 1024 a 49151<br>
+            <input type="radio" name="pregunta4" value="mayor65535"> Mayor de 65535<br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>5.- ¿Qué información contiene el encabezado de la Capa 3 para ayudar en el envío de datos?</legend>
+            <input type="radio" name="pregunta5" value="logica"> Dirección lógica del host de destino<br>
+            <input type="radio" name="pregunta5" value="puerto"> Número de puerto<br>
+            <input type="radio" name="pregunta5" value="fisica"> Dirección física del dispositivo<br>
+            <input type="radio" name="pregunta5" value="identificador"> Identificador de conexión virtual<br>
+        </fieldset>
+    
+        <br>
+        <input type="submit" value="Enviar Respuestas">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+  <libro>
+    <titulo>El Gran Gatsby</titulo>
+    <autor>F. Scott Fitzgerald</autor>
+    <anio>1925</anio>
+    <genero>Ficción</genero>
+  </libro>
+  <libro>
+    <titulo>1984</titulo>
+    <autor>George Orwell</autor>
+    <anio>1949</anio>
+    <genero>Distopía</genero>
+  </libro>
+</libreria>

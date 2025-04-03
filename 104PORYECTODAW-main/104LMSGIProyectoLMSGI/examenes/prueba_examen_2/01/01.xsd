@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="productosfinancieros">
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="producto" maxOccurs="unbounded">
+          <xs:complexType>
+
+            <xs:choice> <!-- Se utiliza choice porque solo puede ser en este caso bono,futuro o acciones -->
+            
+              <xs:element name="bono" minOccurs="0"> <!-- El min occurs 0 se pone cuando puede no aparecer-->
+                <xs:complexType>
+
+                  <xs:sequence>
+                    <xs:element name="valoractual">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="moneda"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="beneficio"/>
+                  </xs:sequence>
+
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="futuro" minOccurs="0">
+                <xs:complexType>
+
+                  <xs:sequence>
+                    <xs:element name="elemento">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="idioma"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="beneficio"/>
+                  </xs:sequence>
+
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="acciones" minOccurs="0">
+                <xs:complexType>
+
+                  <xs:sequence>
+                    <xs:element name="empresa">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="pais"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:float" name="beneficio"/>
+                  </xs:sequence>
+
+                </xs:complexType>
+              </xs:element>
+
+            </xs:choice>
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+  </xs:element>
+</xs:schema>

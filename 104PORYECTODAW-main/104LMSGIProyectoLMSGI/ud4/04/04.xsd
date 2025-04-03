@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Declaracion del esquema -->
+<xs:element name="universidad">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="nombre" type="tipoNombre"/>
+        <xs:element name="fechaconstruccion" type="xs:string"/>
+        <xs:element name="pais" type="xs:string"/>
+        <xs:element name="carreras" type="tipoCarreras"/>
+        <xs:element name="asignaturas" type="tipoAsignaturas"/>
+        <xs:element name="alumnos" type="tipoAlumnos"/>
+    </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<!-- Declaracion de elementos simples -->
+<!-- Declaracion de elementos complejos -->
+<xs:complexType name="tipoNombre">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="year" type="xs:gYear" use="optional"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+<xs:complexType name="tipoCarreras">
+    <xs:sequence>
+        <xs:element name="carrera" type="tipoCarrera" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoCarrera">
+    <xs:sequence>
+        <xs:element name="nombre" type="tipoNombre" minOccurs="0"></xs:element>
+        <xs:element name="plan" type="xs:gYear" minOccurs="0"></xs:element>
+        <xs:element name="creditos" type="xs:int" minOccurs="0"></xs:element>
+        <xs:element name="centro" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element name="subdirector" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element name="asignaturas" type="tipoAsignaturas" minOccurs="0"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="optional"/>
+    <xs:attribute name="codigo" type="xs:IDREF" use="optional"/>
+</xs:complexType>
+<xs:complexType name="tipoAsignaturas">
+    <xs:sequence>
+        <xs:element name="asignatura" type="tipoAsignatura" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoAsignatura">
+    <xs:sequence>
+        <xs:element name="nombre" type="tipoNombre" minOccurs="0"></xs:element>
+        <xs:element name="creditos_teoricos" type="xs:float" minOccurs="0"></xs:element>
+        <xs:element name="creditos_practicos" type="xs:float" minOccurs="0"></xs:element>
+        <xs:element name="trimestre" type="xs:short" minOccurs="0"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="optional"/>
+    <xs:attribute name="titulacion" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="codigo" type="xs:IDREF" use="optional"/>
+</xs:complexType>
+<xs:complexType name="tipoAlumnos">
+    <xs:sequence>
+        <xs:element name="alumno" type="tipoAlumno" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="tipoAlumno">
+    <xs:sequence>
+        <xs:element name="apellido1" type="xs:string"/>
+        <xs:element name="apellido2" type="xs:string"/>
+        <xs:element name="nombre" type="tipoNombre"/>
+        <xs:element name="sexo" type="xs:string"/>
+        <xs:element name="estudios" type="tipoEstudios"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="beca" use="optional">
+        <xs:simpleType> 
+            <xs:restriction base="xs:string"> 
+                <xs:enumeration value="si"/> 
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:complexType>
+<xs:complexType name="tipoEstudios">
+    <xs:sequence>
+        <xs:element name="carrera" type="tipoCarrera"/>
+        <xs:element name="asignaturas" type="tipoAsignaturas"/>
+        <xs:element name="proyecto" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
+<!-- Declaracion de grupos de atributos-->
+</xs:schema>

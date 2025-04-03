@@ -1,0 +1,71 @@
+:root{
+    --color1:white;
+    --color2:#006809;
+    --color3:#bdf523;
+    --color4:rgb(204, 204, 204);
+    --color5:rgb(228, 227, 227);
+
+    --ancho: 300px;
+    --padIzq: 20px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--color5);
+    margin: 30px 50px 10px 30px;
+}
+body>header{
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85px;
+}
+h1{
+    background-color: var(--color4);
+    color: var(--color2);
+    padding-left: var(--padIzq);
+}
+h2{
+    background-color: var(--color2);
+    color: var(--color4);
+    padding-left: var(--padIzq);
+}
+body>main{
+    background-color: var(--color1);
+    padding-top: 1px;
+}
+h3{
+    border: var(--color3) solid 2px;
+    padding-left: var(--padIzq);
+    margin-top: 20px;
+    color: var(--color2);
+}
+
+/* tablas */
+table{
+    margin-left: 8vw;
+    width: 74vw;
+    padding-top: 20px;
+}
+td,th{
+    border-bottom: var(--color5) solid 1px;
+    padding: 1px;
+}
+table>caption {
+    caption-side: bottom;
+    color: var(--color2);
+    font-style: italic;
+}
+  
+/* Pie de pagina con totales*/
+body>footer{
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: right;
+}
+body>footer>div{
+    padding: 10px;
+}

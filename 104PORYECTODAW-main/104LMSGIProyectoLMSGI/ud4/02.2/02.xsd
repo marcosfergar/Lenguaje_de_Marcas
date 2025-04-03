@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Declaracion de elementos simples -->
+<!-- Declaracion de elementos complejos -->
+<!-- Declaracion de grupos de atributos-->
+<xs:attributeGroup name="grupoAttLibro">
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="genero" type="xs:string" use="optional"/>
+    <xs:attribute name="idioma" type="xs:string" default="Español"/>
+    <xs:attribute name="formato" default="impreso">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="impreso"/>
+                <xs:enumeration value="digital"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="referencia" type="xs:IDREF" use="optional"/>
+</xs:attributeGroup>
+<!-- libro (titulo, autores, anio) -->
+<xs:complexType name="tipolibro">
+    <xs:sequence>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autores" type="tipoAutores"/>   
+        <xs:element name="anio" type="xs:gYear"/>       
+    </xs:sequence>
+    <xs:attributeGroup ref="grupoAttLibro"/>
+</xs:complexType>
+<!-- autores (autor+) -->
+<xs:complexType name="tipoAutores">
+    <xs:sequence>
+        <xs:element name="autor" type="tipoAutor" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<!-- autor (nombre, apellido, nacionalidad?) -->
+<xs:complexType name="tipoAutor">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="apellido" type="xs:string"/>
+        <xs:element name="nacionalidad" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
+<!-- Declaracion de elementos  -->
+<!-- Declaracion del esquema -->
+    <xs:element name="biblioteca">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="libro" type="tipolibro" maxOccurs="unbounded"/>
+        </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

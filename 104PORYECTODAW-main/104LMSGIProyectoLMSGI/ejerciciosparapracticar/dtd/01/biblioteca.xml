@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+<biblioteca>
+  <libro id="L1" formato="impreso" idioma="es">
+    <titulo>XML en profundidad</titulo>
+    <autor>John Smith</autor>
+    <editorial>Editorial A</editorial>
+    <anio>2020</anio>
+    <precio>25</precio>
+    <descripcion>%desc;</descripcion>
+    <imagen>%imagen;</imagen>
+  </libro>
+  <libro id="L2" formato="digital" idioma="en">
+    <titulo>Web Design Principles</titulo>
+    <autor>Emily Johnson</autor>
+    <editorial>Editorial B</editorial>
+    <anio>2019</anio>
+    <precio>19.99</precio>
+    <descripcion>Learn the fundamental principles of web design.</descripcion>
+    <imagen>web-design.jpg</imagen>
+  </libro>
+  <revista>
+    <titulo>Revista de Diseño Web</titulo>
+    <editorial>Editorial Pixel Vivo</editorial>
+    <anio>2021</anio>
+    <precio>12.50</precio>
+    <articulo>
+      <titulo>Las tendencias actuales en diseño web</titulo>
+      <autor>Jorge Juan Oliva</autor>
+      <contenido>Este artículo explora las últimas tendencias en diseño web...</contenido>
+    </articulo>
+  </revista>
+</biblioteca>
